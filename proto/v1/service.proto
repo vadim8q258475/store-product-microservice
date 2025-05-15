@@ -1,0 +1,133 @@
+syntax = "proto3";
+
+package product;
+
+option go_package = ".;productpbv1";
+
+service ProductService{
+    rpc List(List.Request) returns (List.Response);
+    rpc Create(Create.Request) returns (Create.Response);
+    rpc Delete(Delete.Request) returns (Delete.Response);
+    rpc Update(Update.Request) returns (Update.Response);
+    rpc GetById(GetById.Request) returns (GetById.Response);
+
+    rpc CategoryList(CategoryList.Request) returns (CategoryList.Response);
+    rpc CategoryCreate(CategoryCreate.Request) returns (CategoryCreate.Response);
+    rpc CategoryDelete(CategoryDelete.Request) returns (CategoryDelete.Response);
+    rpc CategoryUpdate(CategoryUpdate.Request) returns (CategoryUpdate.Response);
+    rpc CategoryGetById(CategoryGetById.Request) returns (CategoryGetById.Response);
+}
+
+message Category{
+    uint32 id = 1;
+    string name = 2;
+    string description = 3;
+}
+
+message Product{
+    uint32 id = 1;
+    string name = 2;
+    string description = 3;
+    int32 qty = 4;
+    float price = 5;
+    Category category = 6;
+}
+
+message List{
+    message Request{}
+    message Response{
+        repeated Product products = 1;
+    }
+}
+
+message Create{
+    message Request{
+        string name = 1;
+        string description = 2;
+        int32 qty = 3;
+        float price = 4;
+        uint32 categoryId = 5;
+    }
+    message Response{
+        uint32 id = 1;
+    }
+}
+
+message Delete{
+    message Request{
+        uint32 id = 1;
+    }
+    message Response{
+        bool success = 1;
+    }
+}
+
+message Update{
+    message Request{
+        uint32 id = 1;
+        string name = 2;
+        string description = 3;
+        int32 qty = 4;
+        float price = 5;
+        uint32 categoryId = 6;
+    }
+    message Response{
+        uint32 id = 1;
+    }
+}
+
+message GetById{
+    message Request{
+        uint32 id = 1;
+    }
+    message Response{
+        Product product = 1;
+    }
+}
+
+message CategoryList{
+    message Request{}
+    message Response{
+        repeated Category categories = 1;
+    }
+}
+
+message CategoryCreate{
+    message Request{
+        string name = 1;
+        string description = 2;
+    }
+    message Response{
+        uint32 id = 1;
+    }
+}
+
+message CategoryDelete{
+    message Request{
+        uint32 id = 1;
+    }
+    message Response{
+        bool success = 1;
+    }
+}
+
+message CategoryUpdate{
+    message Request{
+        uint32 id = 1;
+        string name = 2;
+        string description = 3;
+    }
+    message Response{
+        uint32 id = 1;
+    }
+}
+
+message CategoryGetById{
+    message Request{
+        uint32 id = 1;
+    }
+    message Response{
+        Category category = 1;
+    }
+}
+
