@@ -4,7 +4,7 @@ services:
   db:
     image: postgres
     ports:
-      - "5433:5433"
+      - "5432:5432"
     env_file:
       - .env
     healthcheck:
@@ -17,7 +17,7 @@ services:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_DB: ${DB_NAME}
     networks:
-      - store-net
+      - product-net
   product1:
     build: .
     container_name: product-store-microservice-container-1
@@ -27,7 +27,7 @@ services:
       db:
         condition: service_healthy
     networks:
-      - store-net
+      - product-net
   product2:
     build: .
     container_name: product-store-microservice-container-2
@@ -37,7 +37,7 @@ services:
       db:
         condition: service_healthy
     networks:
-      - store-net
+      - product-net
   product3:
     build: .
     container_name: product-store-microservice-container-3
@@ -47,7 +47,7 @@ services:
       db:
         condition: service_healthy
     networks:
-      - store-net
+      - product-net
   product-nginx:
     image: nginx
     ports:
@@ -55,6 +55,7 @@ services:
     volumes:
       - ./product-nginx.conf:/etc/nginx/nginx.conf
     networks:
+      - product-net
       - store-net
     depends_on:
       - product1
@@ -65,3 +66,5 @@ networks:
   store-net:
     external: true
     name: store-net
+  product-net:
+    internal: true

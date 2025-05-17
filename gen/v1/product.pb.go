@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.36.6
 // 	protoc        v6.30.2
-// source: service.proto
+// source: product.proto
 
 package productpbv1
 
@@ -32,7 +32,7 @@ type Category struct {
 
 func (x *Category) Reset() {
 	*x = Category{}
-	mi := &file_service_proto_msgTypes[0]
+	mi := &file_product_proto_msgTypes[0]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -44,7 +44,7 @@ func (x *Category) String() string {
 func (*Category) ProtoMessage() {}
 
 func (x *Category) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[0]
+	mi := &file_product_proto_msgTypes[0]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -57,7 +57,7 @@ func (x *Category) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Category.ProtoReflect.Descriptor instead.
 func (*Category) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{0}
+	return file_product_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *Category) GetId() uint32 {
@@ -95,7 +95,7 @@ type Product struct {
 
 func (x *Product) Reset() {
 	*x = Product{}
-	mi := &file_service_proto_msgTypes[1]
+	mi := &file_product_proto_msgTypes[1]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -107,7 +107,7 @@ func (x *Product) String() string {
 func (*Product) ProtoMessage() {}
 
 func (x *Product) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[1]
+	mi := &file_product_proto_msgTypes[1]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -120,7 +120,7 @@ func (x *Product) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Product.ProtoReflect.Descriptor instead.
 func (*Product) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{1}
+	return file_product_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Product) GetId() uint32 {
@@ -173,7 +173,7 @@ type List struct {
 
 func (x *List) Reset() {
 	*x = List{}
-	mi := &file_service_proto_msgTypes[2]
+	mi := &file_product_proto_msgTypes[2]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -185,7 +185,7 @@ func (x *List) String() string {
 func (*List) ProtoMessage() {}
 
 func (x *List) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[2]
+	mi := &file_product_proto_msgTypes[2]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -198,7 +198,7 @@ func (x *List) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use List.ProtoReflect.Descriptor instead.
 func (*List) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{2}
+	return file_product_proto_rawDescGZIP(), []int{2}
 }
 
 type Create struct {
@@ -209,7 +209,7 @@ type Create struct {
 
 func (x *Create) Reset() {
 	*x = Create{}
-	mi := &file_service_proto_msgTypes[3]
+	mi := &file_product_proto_msgTypes[3]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -221,7 +221,7 @@ func (x *Create) String() string {
 func (*Create) ProtoMessage() {}
 
 func (x *Create) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[3]
+	mi := &file_product_proto_msgTypes[3]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -234,7 +234,7 @@ func (x *Create) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Create.ProtoReflect.Descriptor instead.
 func (*Create) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{3}
+	return file_product_proto_rawDescGZIP(), []int{3}
 }
 
 type Delete struct {
@@ -245,7 +245,7 @@ type Delete struct {
 
 func (x *Delete) Reset() {
 	*x = Delete{}
-	mi := &file_service_proto_msgTypes[4]
+	mi := &file_product_proto_msgTypes[4]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -257,7 +257,7 @@ func (x *Delete) String() string {
 func (*Delete) ProtoMessage() {}
 
 func (x *Delete) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[4]
+	mi := &file_product_proto_msgTypes[4]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -270,7 +270,7 @@ func (x *Delete) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Delete.ProtoReflect.Descriptor instead.
 func (*Delete) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{4}
+	return file_product_proto_rawDescGZIP(), []int{4}
 }
 
 type Update struct {
@@ -281,7 +281,7 @@ type Update struct {
 
 func (x *Update) Reset() {
 	*x = Update{}
-	mi := &file_service_proto_msgTypes[5]
+	mi := &file_product_proto_msgTypes[5]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -293,7 +293,7 @@ func (x *Update) String() string {
 func (*Update) ProtoMessage() {}
 
 func (x *Update) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[5]
+	mi := &file_product_proto_msgTypes[5]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -306,7 +306,7 @@ func (x *Update) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Update.ProtoReflect.Descriptor instead.
 func (*Update) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{5}
+	return file_product_proto_rawDescGZIP(), []int{5}
 }
 
 type GetById struct {
@@ -317,7 +317,7 @@ type GetById struct {
 
 func (x *GetById) Reset() {
 	*x = GetById{}
-	mi := &file_service_proto_msgTypes[6]
+	mi := &file_product_proto_msgTypes[6]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -329,7 +329,7 @@ func (x *GetById) String() string {
 func (*GetById) ProtoMessage() {}
 
 func (x *GetById) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[6]
+	mi := &file_product_proto_msgTypes[6]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -342,7 +342,7 @@ func (x *GetById) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetById.ProtoReflect.Descriptor instead.
 func (*GetById) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{6}
+	return file_product_proto_rawDescGZIP(), []int{6}
 }
 
 type CategoryList struct {
@@ -353,7 +353,7 @@ type CategoryList struct {
 
 func (x *CategoryList) Reset() {
 	*x = CategoryList{}
-	mi := &file_service_proto_msgTypes[7]
+	mi := &file_product_proto_msgTypes[7]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -365,7 +365,7 @@ func (x *CategoryList) String() string {
 func (*CategoryList) ProtoMessage() {}
 
 func (x *CategoryList) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[7]
+	mi := &file_product_proto_msgTypes[7]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -378,7 +378,7 @@ func (x *CategoryList) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryList.ProtoReflect.Descriptor instead.
 func (*CategoryList) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{7}
+	return file_product_proto_rawDescGZIP(), []int{7}
 }
 
 type CategoryCreate struct {
@@ -389,7 +389,7 @@ type CategoryCreate struct {
 
 func (x *CategoryCreate) Reset() {
 	*x = CategoryCreate{}
-	mi := &file_service_proto_msgTypes[8]
+	mi := &file_product_proto_msgTypes[8]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -401,7 +401,7 @@ func (x *CategoryCreate) String() string {
 func (*CategoryCreate) ProtoMessage() {}
 
 func (x *CategoryCreate) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[8]
+	mi := &file_product_proto_msgTypes[8]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -414,7 +414,7 @@ func (x *CategoryCreate) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryCreate.ProtoReflect.Descriptor instead.
 func (*CategoryCreate) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{8}
+	return file_product_proto_rawDescGZIP(), []int{8}
 }
 
 type CategoryDelete struct {
@@ -425,7 +425,7 @@ type CategoryDelete struct {
 
 func (x *CategoryDelete) Reset() {
 	*x = CategoryDelete{}
-	mi := &file_service_proto_msgTypes[9]
+	mi := &file_product_proto_msgTypes[9]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -437,7 +437,7 @@ func (x *CategoryDelete) String() string {
 func (*CategoryDelete) ProtoMessage() {}
 
 func (x *CategoryDelete) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[9]
+	mi := &file_product_proto_msgTypes[9]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -450,7 +450,7 @@ func (x *CategoryDelete) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryDelete.ProtoReflect.Descriptor instead.
 func (*CategoryDelete) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{9}
+	return file_product_proto_rawDescGZIP(), []int{9}
 }
 
 type CategoryUpdate struct {
@@ -461,7 +461,7 @@ type CategoryUpdate struct {
 
 func (x *CategoryUpdate) Reset() {
 	*x = CategoryUpdate{}
-	mi := &file_service_proto_msgTypes[10]
+	mi := &file_product_proto_msgTypes[10]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -473,7 +473,7 @@ func (x *CategoryUpdate) String() string {
 func (*CategoryUpdate) ProtoMessage() {}
 
 func (x *CategoryUpdate) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[10]
+	mi := &file_product_proto_msgTypes[10]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -486,7 +486,7 @@ func (x *CategoryUpdate) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryUpdate.ProtoReflect.Descriptor instead.
 func (*CategoryUpdate) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{10}
+	return file_product_proto_rawDescGZIP(), []int{10}
 }
 
 type CategoryGetById struct {
@@ -497,7 +497,7 @@ type CategoryGetById struct {
 
 func (x *CategoryGetById) Reset() {
 	*x = CategoryGetById{}
-	mi := &file_service_proto_msgTypes[11]
+	mi := &file_product_proto_msgTypes[11]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -509,7 +509,7 @@ func (x *CategoryGetById) String() string {
 func (*CategoryGetById) ProtoMessage() {}
 
 func (x *CategoryGetById) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[11]
+	mi := &file_product_proto_msgTypes[11]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -522,7 +522,7 @@ func (x *CategoryGetById) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryGetById.ProtoReflect.Descriptor instead.
 func (*CategoryGetById) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{11}
+	return file_product_proto_rawDescGZIP(), []int{11}
 }
 
 type List_Request struct {
@@ -533,7 +533,7 @@ type List_Request struct {
 
 func (x *List_Request) Reset() {
 	*x = List_Request{}
-	mi := &file_service_proto_msgTypes[12]
+	mi := &file_product_proto_msgTypes[12]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -545,7 +545,7 @@ func (x *List_Request) String() string {
 func (*List_Request) ProtoMessage() {}
 
 func (x *List_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[12]
+	mi := &file_product_proto_msgTypes[12]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -558,7 +558,7 @@ func (x *List_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use List_Request.ProtoReflect.Descriptor instead.
 func (*List_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{2, 0}
+	return file_product_proto_rawDescGZIP(), []int{2, 0}
 }
 
 type List_Response struct {
@@ -570,7 +570,7 @@ type List_Response struct {
 
 func (x *List_Response) Reset() {
 	*x = List_Response{}
-	mi := &file_service_proto_msgTypes[13]
+	mi := &file_product_proto_msgTypes[13]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -582,7 +582,7 @@ func (x *List_Response) String() string {
 func (*List_Response) ProtoMessage() {}
 
 func (x *List_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[13]
+	mi := &file_product_proto_msgTypes[13]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -595,7 +595,7 @@ func (x *List_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use List_Response.ProtoReflect.Descriptor instead.
 func (*List_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{2, 1}
+	return file_product_proto_rawDescGZIP(), []int{2, 1}
 }
 
 func (x *List_Response) GetProducts() []*Product {
@@ -618,7 +618,7 @@ type Create_Request struct {
 
 func (x *Create_Request) Reset() {
 	*x = Create_Request{}
-	mi := &file_service_proto_msgTypes[14]
+	mi := &file_product_proto_msgTypes[14]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -630,7 +630,7 @@ func (x *Create_Request) String() string {
 func (*Create_Request) ProtoMessage() {}
 
 func (x *Create_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[14]
+	mi := &file_product_proto_msgTypes[14]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -643,7 +643,7 @@ func (x *Create_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Create_Request.ProtoReflect.Descriptor instead.
 func (*Create_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{3, 0}
+	return file_product_proto_rawDescGZIP(), []int{3, 0}
 }
 
 func (x *Create_Request) GetName() string {
@@ -690,7 +690,7 @@ type Create_Response struct {
 
 func (x *Create_Response) Reset() {
 	*x = Create_Response{}
-	mi := &file_service_proto_msgTypes[15]
+	mi := &file_product_proto_msgTypes[15]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -702,7 +702,7 @@ func (x *Create_Response) String() string {
 func (*Create_Response) ProtoMessage() {}
 
 func (x *Create_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[15]
+	mi := &file_product_proto_msgTypes[15]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -715,7 +715,7 @@ func (x *Create_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Create_Response.ProtoReflect.Descriptor instead.
 func (*Create_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{3, 1}
+	return file_product_proto_rawDescGZIP(), []int{3, 1}
 }
 
 func (x *Create_Response) GetId() uint32 {
@@ -734,7 +734,7 @@ type Delete_Request struct {
 
 func (x *Delete_Request) Reset() {
 	*x = Delete_Request{}
-	mi := &file_service_proto_msgTypes[16]
+	mi := &file_product_proto_msgTypes[16]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -746,7 +746,7 @@ func (x *Delete_Request) String() string {
 func (*Delete_Request) ProtoMessage() {}
 
 func (x *Delete_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[16]
+	mi := &file_product_proto_msgTypes[16]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -759,7 +759,7 @@ func (x *Delete_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Delete_Request.ProtoReflect.Descriptor instead.
 func (*Delete_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{4, 0}
+	return file_product_proto_rawDescGZIP(), []int{4, 0}
 }
 
 func (x *Delete_Request) GetId() uint32 {
@@ -778,7 +778,7 @@ type Delete_Response struct {
 
 func (x *Delete_Response) Reset() {
 	*x = Delete_Response{}
-	mi := &file_service_proto_msgTypes[17]
+	mi := &file_product_proto_msgTypes[17]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -790,7 +790,7 @@ func (x *Delete_Response) String() string {
 func (*Delete_Response) ProtoMessage() {}
 
 func (x *Delete_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[17]
+	mi := &file_product_proto_msgTypes[17]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -803,7 +803,7 @@ func (x *Delete_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Delete_Response.ProtoReflect.Descriptor instead.
 func (*Delete_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{4, 1}
+	return file_product_proto_rawDescGZIP(), []int{4, 1}
 }
 
 func (x *Delete_Response) GetSuccess() bool {
@@ -827,7 +827,7 @@ type Update_Request struct {
 
 func (x *Update_Request) Reset() {
 	*x = Update_Request{}
-	mi := &file_service_proto_msgTypes[18]
+	mi := &file_product_proto_msgTypes[18]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -839,7 +839,7 @@ func (x *Update_Request) String() string {
 func (*Update_Request) ProtoMessage() {}
 
 func (x *Update_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[18]
+	mi := &file_product_proto_msgTypes[18]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -852,7 +852,7 @@ func (x *Update_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Update_Request.ProtoReflect.Descriptor instead.
 func (*Update_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{5, 0}
+	return file_product_proto_rawDescGZIP(), []int{5, 0}
 }
 
 func (x *Update_Request) GetId() uint32 {
@@ -906,7 +906,7 @@ type Update_Response struct {
 
 func (x *Update_Response) Reset() {
 	*x = Update_Response{}
-	mi := &file_service_proto_msgTypes[19]
+	mi := &file_product_proto_msgTypes[19]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -918,7 +918,7 @@ func (x *Update_Response) String() string {
 func (*Update_Response) ProtoMessage() {}
 
 func (x *Update_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[19]
+	mi := &file_product_proto_msgTypes[19]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -931,7 +931,7 @@ func (x *Update_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Update_Response.ProtoReflect.Descriptor instead.
 func (*Update_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{5, 1}
+	return file_product_proto_rawDescGZIP(), []int{5, 1}
 }
 
 func (x *Update_Response) GetId() uint32 {
@@ -950,7 +950,7 @@ type GetById_Request struct {
 
 func (x *GetById_Request) Reset() {
 	*x = GetById_Request{}
-	mi := &file_service_proto_msgTypes[20]
+	mi := &file_product_proto_msgTypes[20]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -962,7 +962,7 @@ func (x *GetById_Request) String() string {
 func (*GetById_Request) ProtoMessage() {}
 
 func (x *GetById_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[20]
+	mi := &file_product_proto_msgTypes[20]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -975,7 +975,7 @@ func (x *GetById_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetById_Request.ProtoReflect.Descriptor instead.
 func (*GetById_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{6, 0}
+	return file_product_proto_rawDescGZIP(), []int{6, 0}
 }
 
 func (x *GetById_Request) GetId() uint32 {
@@ -994,7 +994,7 @@ type GetById_Response struct {
 
 func (x *GetById_Response) Reset() {
 	*x = GetById_Response{}
-	mi := &file_service_proto_msgTypes[21]
+	mi := &file_product_proto_msgTypes[21]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1006,7 +1006,7 @@ func (x *GetById_Response) String() string {
 func (*GetById_Response) ProtoMessage() {}
 
 func (x *GetById_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[21]
+	mi := &file_product_proto_msgTypes[21]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1019,7 +1019,7 @@ func (x *GetById_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetById_Response.ProtoReflect.Descriptor instead.
 func (*GetById_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{6, 1}
+	return file_product_proto_rawDescGZIP(), []int{6, 1}
 }
 
 func (x *GetById_Response) GetProduct() *Product {
@@ -1037,7 +1037,7 @@ type CategoryList_Request struct {
 
 func (x *CategoryList_Request) Reset() {
 	*x = CategoryList_Request{}
-	mi := &file_service_proto_msgTypes[22]
+	mi := &file_product_proto_msgTypes[22]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1049,7 +1049,7 @@ func (x *CategoryList_Request) String() string {
 func (*CategoryList_Request) ProtoMessage() {}
 
 func (x *CategoryList_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[22]
+	mi := &file_product_proto_msgTypes[22]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1062,7 +1062,7 @@ func (x *CategoryList_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryList_Request.ProtoReflect.Descriptor instead.
 func (*CategoryList_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{7, 0}
+	return file_product_proto_rawDescGZIP(), []int{7, 0}
 }
 
 type CategoryList_Response struct {
@@ -1074,7 +1074,7 @@ type CategoryList_Response struct {
 
 func (x *CategoryList_Response) Reset() {
 	*x = CategoryList_Response{}
-	mi := &file_service_proto_msgTypes[23]
+	mi := &file_product_proto_msgTypes[23]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1086,7 +1086,7 @@ func (x *CategoryList_Response) String() string {
 func (*CategoryList_Response) ProtoMessage() {}
 
 func (x *CategoryList_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[23]
+	mi := &file_product_proto_msgTypes[23]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1099,7 +1099,7 @@ func (x *CategoryList_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryList_Response.ProtoReflect.Descriptor instead.
 func (*CategoryList_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{7, 1}
+	return file_product_proto_rawDescGZIP(), []int{7, 1}
 }
 
 func (x *CategoryList_Response) GetCategories() []*Category {
@@ -1119,7 +1119,7 @@ type CategoryCreate_Request struct {
 
 func (x *CategoryCreate_Request) Reset() {
 	*x = CategoryCreate_Request{}
-	mi := &file_service_proto_msgTypes[24]
+	mi := &file_product_proto_msgTypes[24]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1131,7 +1131,7 @@ func (x *CategoryCreate_Request) String() string {
 func (*CategoryCreate_Request) ProtoMessage() {}
 
 func (x *CategoryCreate_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[24]
+	mi := &file_product_proto_msgTypes[24]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1144,7 +1144,7 @@ func (x *CategoryCreate_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryCreate_Request.ProtoReflect.Descriptor instead.
 func (*CategoryCreate_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{8, 0}
+	return file_product_proto_rawDescGZIP(), []int{8, 0}
 }
 
 func (x *CategoryCreate_Request) GetName() string {
@@ -1170,7 +1170,7 @@ type CategoryCreate_Response struct {
 
 func (x *CategoryCreate_Response) Reset() {
 	*x = CategoryCreate_Response{}
-	mi := &file_service_proto_msgTypes[25]
+	mi := &file_product_proto_msgTypes[25]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1182,7 +1182,7 @@ func (x *CategoryCreate_Response) String() string {
 func (*CategoryCreate_Response) ProtoMessage() {}
 
 func (x *CategoryCreate_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[25]
+	mi := &file_product_proto_msgTypes[25]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1195,7 +1195,7 @@ func (x *CategoryCreate_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryCreate_Response.ProtoReflect.Descriptor instead.
 func (*CategoryCreate_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{8, 1}
+	return file_product_proto_rawDescGZIP(), []int{8, 1}
 }
 
 func (x *CategoryCreate_Response) GetId() uint32 {
@@ -1214,7 +1214,7 @@ type CategoryDelete_Request struct {
 
 func (x *CategoryDelete_Request) Reset() {
 	*x = CategoryDelete_Request{}
-	mi := &file_service_proto_msgTypes[26]
+	mi := &file_product_proto_msgTypes[26]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1226,7 +1226,7 @@ func (x *CategoryDelete_Request) String() string {
 func (*CategoryDelete_Request) ProtoMessage() {}
 
 func (x *CategoryDelete_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[26]
+	mi := &file_product_proto_msgTypes[26]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1239,7 +1239,7 @@ func (x *CategoryDelete_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryDelete_Request.ProtoReflect.Descriptor instead.
 func (*CategoryDelete_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{9, 0}
+	return file_product_proto_rawDescGZIP(), []int{9, 0}
 }
 
 func (x *CategoryDelete_Request) GetId() uint32 {
@@ -1258,7 +1258,7 @@ type CategoryDelete_Response struct {
 
 func (x *CategoryDelete_Response) Reset() {
 	*x = CategoryDelete_Response{}
-	mi := &file_service_proto_msgTypes[27]
+	mi := &file_product_proto_msgTypes[27]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1270,7 +1270,7 @@ func (x *CategoryDelete_Response) String() string {
 func (*CategoryDelete_Response) ProtoMessage() {}
 
 func (x *CategoryDelete_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[27]
+	mi := &file_product_proto_msgTypes[27]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1283,7 +1283,7 @@ func (x *CategoryDelete_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryDelete_Response.ProtoReflect.Descriptor instead.
 func (*CategoryDelete_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{9, 1}
+	return file_product_proto_rawDescGZIP(), []int{9, 1}
 }
 
 func (x *CategoryDelete_Response) GetSuccess() bool {
@@ -1304,7 +1304,7 @@ type CategoryUpdate_Request struct {
 
 func (x *CategoryUpdate_Request) Reset() {
 	*x = CategoryUpdate_Request{}
-	mi := &file_service_proto_msgTypes[28]
+	mi := &file_product_proto_msgTypes[28]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1316,7 +1316,7 @@ func (x *CategoryUpdate_Request) String() string {
 func (*CategoryUpdate_Request) ProtoMessage() {}
 
 func (x *CategoryUpdate_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[28]
+	mi := &file_product_proto_msgTypes[28]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1329,7 +1329,7 @@ func (x *CategoryUpdate_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryUpdate_Request.ProtoReflect.Descriptor instead.
 func (*CategoryUpdate_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{10, 0}
+	return file_product_proto_rawDescGZIP(), []int{10, 0}
 }
 
 func (x *CategoryUpdate_Request) GetId() uint32 {
@@ -1362,7 +1362,7 @@ type CategoryUpdate_Response struct {
 
 func (x *CategoryUpdate_Response) Reset() {
 	*x = CategoryUpdate_Response{}
-	mi := &file_service_proto_msgTypes[29]
+	mi := &file_product_proto_msgTypes[29]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1374,7 +1374,7 @@ func (x *CategoryUpdate_Response) String() string {
 func (*CategoryUpdate_Response) ProtoMessage() {}
 
 func (x *CategoryUpdate_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[29]
+	mi := &file_product_proto_msgTypes[29]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1387,7 +1387,7 @@ func (x *CategoryUpdate_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryUpdate_Response.ProtoReflect.Descriptor instead.
 func (*CategoryUpdate_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{10, 1}
+	return file_product_proto_rawDescGZIP(), []int{10, 1}
 }
 
 func (x *CategoryUpdate_Response) GetId() uint32 {
@@ -1406,7 +1406,7 @@ type CategoryGetById_Request struct {
 
 func (x *CategoryGetById_Request) Reset() {
 	*x = CategoryGetById_Request{}
-	mi := &file_service_proto_msgTypes[30]
+	mi := &file_product_proto_msgTypes[30]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1418,7 +1418,7 @@ func (x *CategoryGetById_Request) String() string {
 func (*CategoryGetById_Request) ProtoMessage() {}
 
 func (x *CategoryGetById_Request) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[30]
+	mi := &file_product_proto_msgTypes[30]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1431,7 +1431,7 @@ func (x *CategoryGetById_Request) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryGetById_Request.ProtoReflect.Descriptor instead.
 func (*CategoryGetById_Request) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{11, 0}
+	return file_product_proto_rawDescGZIP(), []int{11, 0}
 }
 
 func (x *CategoryGetById_Request) GetId() uint32 {
@@ -1450,7 +1450,7 @@ type CategoryGetById_Response struct {
 
 func (x *CategoryGetById_Response) Reset() {
 	*x = CategoryGetById_Response{}
-	mi := &file_service_proto_msgTypes[31]
+	mi := &file_product_proto_msgTypes[31]
 	ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 	ms.StoreMessageInfo(mi)
 }
@@ -1462,7 +1462,7 @@ func (x *CategoryGetById_Response) String() string {
 func (*CategoryGetById_Response) ProtoMessage() {}
 
 func (x *CategoryGetById_Response) ProtoReflect() protoreflect.Message {
-	mi := &file_service_proto_msgTypes[31]
+	mi := &file_product_proto_msgTypes[31]
 	if x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1475,7 +1475,7 @@ func (x *CategoryGetById_Response) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CategoryGetById_Response.ProtoReflect.Descriptor instead.
 func (*CategoryGetById_Response) Descriptor() ([]byte, []int) {
-	return file_service_proto_rawDescGZIP(), []int{11, 1}
+	return file_product_proto_rawDescGZIP(), []int{11, 1}
 }
 
 func (x *CategoryGetById_Response) GetCategory() *Category {
@@ -1485,11 +1485,11 @@ func (x *CategoryGetById_Response) GetCategory() *Category {
 	return nil
 }
 
-var File_service_proto protoreflect.FileDescriptor
+var File_product_proto protoreflect.FileDescriptor
 
-const file_service_proto_rawDesc = "" +
+const file_product_proto_rawDesc = "" +
 	"\n" +
-	"\rservice.proto\x12\aproduct\"P\n" +
+	"\rproduct.proto\x12\aproduct\"P\n" +
 	"\bCategory\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x12\n" +
 	"\x04name\x18\x02 \x01(\tR\x04name\x12 \n" +
@@ -1580,19 +1580,19 @@ const file_service_proto_rawDesc = "" +
 	"\x0fCategoryGetById\x12 .product.CategoryGetById.Request\x1a!.product.CategoryGetById.ResponseB\x0fZ\r.;productpbv1b\x06proto3"
 
 var (
-	file_service_proto_rawDescOnce sync.Once
-	file_service_proto_rawDescData []byte
+	file_product_proto_rawDescOnce sync.Once
+	file_product_proto_rawDescData []byte
 )
 
-func file_service_proto_rawDescGZIP() []byte {
-	file_service_proto_rawDescOnce.Do(func() {
-		file_service_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_service_proto_rawDesc), len(file_service_proto_rawDesc)))
+func file_product_proto_rawDescGZIP() []byte {
+	file_product_proto_rawDescOnce.Do(func() {
+		file_product_proto_rawDescData = protoimpl.X.CompressGZIP(unsafe.Slice(unsafe.StringData(file_product_proto_rawDesc), len(file_product_proto_rawDesc)))
 	})
-	return file_service_proto_rawDescData
+	return file_product_proto_rawDescData
 }
 
-var file_service_proto_msgTypes = make([]protoimpl.MessageInfo, 32)
-var file_service_proto_goTypes = []any{
+var file_product_proto_msgTypes = make([]protoimpl.MessageInfo, 32)
+var file_product_proto_goTypes = []any{
 	(*Category)(nil),                 // 0: product.Category
 	(*Product)(nil),                  // 1: product.Product
 	(*List)(nil),                     // 2: product.List
@@ -1626,7 +1626,7 @@ var file_service_proto_goTypes = []any{
 	(*CategoryGetById_Request)(nil),  // 30: product.CategoryGetById.Request
 	(*CategoryGetById_Response)(nil), // 31: product.CategoryGetById.Response
 }
-var file_service_proto_depIdxs = []int32{
+var file_product_proto_depIdxs = []int32{
 	0,  // 0: product.Product.category:type_name -> product.Category
 	1,  // 1: product.List.Response.products:type_name -> product.Product
 	1,  // 2: product.GetById.Response.product:type_name -> product.Product
@@ -1659,26 +1659,26 @@ var file_service_proto_depIdxs = []int32{
 	0,  // [0:5] is the sub-list for field type_name
 }
 
-func init() { file_service_proto_init() }
-func file_service_proto_init() {
-	if File_service_proto != nil {
+func init() { file_product_proto_init() }
+func file_product_proto_init() {
+	if File_product_proto != nil {
 		return
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: unsafe.Slice(unsafe.StringData(file_service_proto_rawDesc), len(file_service_proto_rawDesc)),
+			RawDescriptor: unsafe.Slice(unsafe.StringData(file_product_proto_rawDesc), len(file_product_proto_rawDesc)),
 			NumEnums:      0,
 			NumMessages:   32,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_service_proto_goTypes,
-		DependencyIndexes: file_service_proto_depIdxs,
-		MessageInfos:      file_service_proto_msgTypes,
+		GoTypes:           file_product_proto_goTypes,
+		DependencyIndexes: file_product_proto_depIdxs,
+		MessageInfos:      file_product_proto_msgTypes,
 	}.Build()
-	File_service_proto = out.File
-	file_service_proto_goTypes = nil
-	file_service_proto_depIdxs = nil
+	File_product_proto = out.File
+	file_product_proto_goTypes = nil
+	file_product_proto_depIdxs = nil
 }

@@ -51,6 +51,7 @@ func (s *productService) List(ctx context.Context) (*gen.List_Response, error) {
 			products[i] = ProductModelToRequest(productModel, categoryModel)
 		}(i, productModel)
 	}
+	wg.Wait()
 	select {
 	case err = <-errCh:
 		return nil, err
