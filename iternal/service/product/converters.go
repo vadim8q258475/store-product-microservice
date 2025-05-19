@@ -2,11 +2,12 @@ package service
 
 import (
 	gen "github.com/vadim8q258475/store-product-microservice/gen/v1"
-	repo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx"
+	categoryRepo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/category"
+	productRepo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/product"
 )
 
-func ProductCreateRequestToModel(request *gen.Create_Request) repo.Product {
-	return repo.Product{
+func ProductCreateRequestToModel(request *gen.Create_Request) productRepo.Product {
+	return productRepo.Product{
 		Name:        request.Name,
 		Description: request.Description,
 		Qty:         request.Qty,
@@ -15,8 +16,8 @@ func ProductCreateRequestToModel(request *gen.Create_Request) repo.Product {
 	}
 }
 
-func ProductUpdateRequestToModel(request *gen.Update_Request) repo.Product {
-	return repo.Product{
+func ProductUpdateRequestToModel(request *gen.Update_Request) productRepo.Product {
+	return productRepo.Product{
 		ID:          request.Id,
 		Name:        request.Name,
 		Description: request.Description,
@@ -26,7 +27,7 @@ func ProductUpdateRequestToModel(request *gen.Update_Request) repo.Product {
 	}
 }
 
-func ProductModelToRequest(productModel repo.Product, categoryModel repo.Category) *gen.Product {
+func ProductModelToRequest(productModel productRepo.Product, categoryModel categoryRepo.Category) *gen.Product {
 	return &gen.Product{
 		Id:          productModel.ID,
 		Name:        productModel.Name,

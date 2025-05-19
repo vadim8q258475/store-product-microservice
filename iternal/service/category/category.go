@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 
-	repo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx"
+	repo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/category"
 
 	gen "github.com/vadim8q258475/store-product-microservice/gen/v1"
 )

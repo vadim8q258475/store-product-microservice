@@ -2,6 +2,7 @@ package repo
 
 import (
 	"context"
+	"errors"
 
 	"github.com/jmoiron/sqlx"
 )
@@ -22,6 +23,8 @@ type ProductRepo interface {
 	Update(ctx context.Context, product Product) (uint32, error)
 	GetById(ctx context.Context, id uint32) (Product, error)
 }
+
+var ErrNotFound = errors.New("product not found")
 
 type productRepo struct {
 	db *sqlx.DB

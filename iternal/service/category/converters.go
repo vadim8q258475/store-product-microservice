@@ -2,7 +2,7 @@ package service
 
 import (
 	gen "github.com/vadim8q258475/store-product-microservice/gen/v1"
-	repo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx"
+	repo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/category"
 )
 
 func CategoryRequestToModel(request *gen.Category) repo.Category {

@@ -5,7 +5,8 @@ import (
 	"sync"
 
 	gen "github.com/vadim8q258475/store-product-microservice/gen/v1"
-	repo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx"
+	categoryRepo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/category"
+	productRepo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/product"
 )
 
 type ProductService interface {
@@ -17,11 +18,11 @@ type ProductService interface {
 }
 
 type productService struct {
-	productRepo  repo.ProductRepo
-	categoryRepo repo.CategoryRepo
+	productRepo  productRepo.ProductRepo
+	categoryRepo categoryRepo.CategoryRepo
 }
 
-func NewProductService(productRepo repo.ProductRepo, categoryRepo repo.CategoryRepo) ProductService {
+func NewProductService(productRepo productRepo.ProductRepo, categoryRepo categoryRepo.CategoryRepo) ProductService {
 	return &productService{
 		productRepo:  productRepo,
 		categoryRepo: categoryRepo,
@@ -38,7 +39,7 @@ func (s *productService) List(ctx context.Context) (*gen.List_Response, error) {
 	errCh := make(chan error)
 	for i, productModel := range productModels {
 		wg.Add(1)
-		go func(i int, productModel repo.Product) {
+		go func(i int, productModel productRepo.Product) {
 			defer wg.Done()
 			categoryModel, err := s.categoryRepo.GetById(ctx, productModel.CategoryID)
 			if err != nil {

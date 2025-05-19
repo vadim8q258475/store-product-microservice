@@ -3,11 +3,16 @@ package main
 import (
 	"fmt"
 
+	"github.com/go-redis/redis/v8"
 	"github.com/vadim8q258475/store-product-microservice/app"
 	"github.com/vadim8q258475/store-product-microservice/config"
+	"github.com/vadim8q258475/store-product-microservice/iternal/cacher"
 	grpcService "github.com/vadim8q258475/store-product-microservice/iternal/grpc"
 	"github.com/vadim8q258475/store-product-microservice/iternal/interceptor"
 	repo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx"
+
+	categoryRepo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/category"
+	productRepo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/product"
 
 	categoryService "github.com/vadim8q258475/store-product-microservice/iternal/service/category"
 	productService "github.com/vadim8q258475/store-product-microservice/iternal/service/product"
@@ -41,12 +46,22 @@ func main() {
 	defer client.Close()
 
 	// repo
-	categoryRepo := repo.NewCategoryRepo(client)
-	productRepo := repo.NewProductRepo(client)
+	categoryRepos := categoryRepo.NewCategoryRepo(client)
+	productRepos := productRepo.NewProductRepo(client)
+
+	// init cache
+	cacheClient := redis.NewClient(&redis.Options{
+		Addr: cfg.CacheHost + ":" + cfg.CachePort,
+	})
+	cacher := cacher.NewCacher(cacheClient, cfg)
+
+	// repo proxy
+	categoryProxy := categoryRepo.NewCategoryProxy(cacher, categoryRepos)
+	productProxy := productRepo.NewProductProxy(cacher, productRepos)
 
 	// service
-	productService := productService.NewProductService(productRepo, categoryRepo)
-	categoryService := categoryService.NewCategoryService(categoryRepo)
+	productService := productService.NewProductService(productProxy, categoryProxy)
+	categoryService := categoryService.NewCategoryService(categoryProxy)
 
 	// grpc service
 	grpcService := grpcService.NewGrpcService(productService, categoryService)
