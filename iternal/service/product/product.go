@@ -72,7 +72,7 @@ func (s *productService) Delete(ctx context.Context, request *gen.Delete_Request
 	if err != nil {
 		return nil, err
 	}
-	return &gen.Delete_Response{Success: true}, nil
+	return &gen.Delete_Response{}, nil
 }
 
 func (s *productService) Update(ctx context.Context, request *gen.Update_Request) (*gen.Update_Response, error) {

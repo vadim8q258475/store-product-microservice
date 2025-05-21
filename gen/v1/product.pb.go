@@ -771,7 +771,6 @@ func (x *Delete_Request) GetId() uint32 {
 
 type Delete_Response struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Success       bool                   `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -804,13 +803,6 @@ func (x *Delete_Response) ProtoReflect() protoreflect.Message {
 // Deprecated: Use Delete_Response.ProtoReflect.Descriptor instead.
 func (*Delete_Response) Descriptor() ([]byte, []int) {
 	return file_product_proto_rawDescGZIP(), []int{4, 1}
-}
-
-func (x *Delete_Response) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
 }
 
 type Update_Request struct {
@@ -1251,7 +1243,6 @@ func (x *CategoryDelete_Request) GetId() uint32 {
 
 type CategoryDelete_Response struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
-	Success       bool                   `protobuf:"varint,1,opt,name=success,proto3" json:"success,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -1284,13 +1275,6 @@ func (x *CategoryDelete_Response) ProtoReflect() protoreflect.Message {
 // Deprecated: Use CategoryDelete_Response.ProtoReflect.Descriptor instead.
 func (*CategoryDelete_Response) Descriptor() ([]byte, []int) {
 	return file_product_proto_rawDescGZIP(), []int{9, 1}
-}
-
-func (x *CategoryDelete_Response) GetSuccess() bool {
-	if x != nil {
-		return x.Success
-	}
-	return false
 }
 
 type CategoryUpdate_Request struct {
@@ -1515,12 +1499,12 @@ const file_product_proto_rawDesc = "" +
 	"categoryId\x18\x05 \x01(\rR\n" +
 	"categoryId\x1a\x1a\n" +
 	"\bResponse\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\rR\x02id\"I\n" +
+	"\x02id\x18\x01 \x01(\rR\x02id\"/\n" +
 	"\x06Delete\x1a\x19\n" +
 	"\aRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\rR\x02id\x1a$\n" +
-	"\bResponse\x12\x18\n" +
-	"\asuccess\x18\x01 \x01(\bR\asuccess\"\xbe\x01\n" +
+	"\x02id\x18\x01 \x01(\rR\x02id\x1a\n" +
+	"\n" +
+	"\bResponse\"\xbe\x01\n" +
 	"\x06Update\x1a\x97\x01\n" +
 	"\aRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x12\n" +
@@ -1549,12 +1533,12 @@ const file_product_proto_rawDesc = "" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12 \n" +
 	"\vdescription\x18\x02 \x01(\tR\vdescription\x1a\x1a\n" +
 	"\bResponse\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\rR\x02id\"Q\n" +
+	"\x02id\x18\x01 \x01(\rR\x02id\"7\n" +
 	"\x0eCategoryDelete\x1a\x19\n" +
 	"\aRequest\x12\x0e\n" +
-	"\x02id\x18\x01 \x01(\rR\x02id\x1a$\n" +
-	"\bResponse\x12\x18\n" +
-	"\asuccess\x18\x01 \x01(\bR\asuccess\"}\n" +
+	"\x02id\x18\x01 \x01(\rR\x02id\x1a\n" +
+	"\n" +
+	"\bResponse\"}\n" +
 	"\x0eCategoryUpdate\x1aO\n" +
 	"\aRequest\x12\x0e\n" +
 	"\x02id\x18\x01 \x01(\rR\x02id\x12\x12\n" +

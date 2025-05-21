@@ -47,9 +47,9 @@ func (s *categoryService) Create(ctx context.Context, request *gen.CategoryCreat
 func (s *categoryService) Delete(ctx context.Context, request *gen.CategoryDelete_Request) (*gen.CategoryDelete_Response, error) {
 	err := s.repo.Delete(ctx, request.Id)
 	if err != nil {
-		return &gen.CategoryDelete_Response{Success: false}, err
+		return nil, err
 	}
-	return &gen.CategoryDelete_Response{Success: true}, nil
+	return &gen.CategoryDelete_Response{}, nil
 }
 
 func (s *categoryService) Update(ctx context.Context, request *gen.CategoryUpdate_Request) (*gen.CategoryUpdate_Response, error) {

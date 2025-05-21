@@ -58,7 +58,6 @@ message Delete{
         uint32 id = 1;
     }
     message Response{
-        bool success = 1;
     }
 }
 
@@ -107,7 +106,6 @@ message CategoryDelete{
         uint32 id = 1;
     }
     message Response{
-        bool success = 1;
     }
 }
 
