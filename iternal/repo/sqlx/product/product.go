@@ -17,11 +17,11 @@ type Product struct {
 }
 
 type ProductRepo interface {
-	List(ctx context.Context) ([]Product, error)
 	Create(ctx context.Context, product Product) (uint32, error)
 	Delete(ctx context.Context, id uint32) error
 	Update(ctx context.Context, product Product) (uint32, error)
 	GetById(ctx context.Context, id uint32) (Product, error)
+	List(ctx context.Context, query string, args []interface{}) ([]Product, error)
 }
 
 var ErrNotFound = errors.New("product not found")
@@ -36,9 +36,9 @@ func NewProductRepo(db *sqlx.DB) ProductRepo {
 	}
 }
 
-func (r *productRepo) List(ctx context.Context) ([]Product, error) {
+func (r *productRepo) List(ctx context.Context, query string, args []interface{}) ([]Product, error) {
 	var products []Product
-	err := r.db.SelectContext(ctx, &products, "SELECT id, name, description, qty, price, category_id FROM products")
+	err := r.db.SelectContext(ctx, &products, query, args)
 	return products, err
 }
 

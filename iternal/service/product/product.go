@@ -10,7 +10,7 @@ import (
 )
 
 type ProductService interface {
-	List(ctx context.Context) (*gen.List_Response, error)
+	List(ctx context.Context, request *gen.List_Request) (*gen.List_Response, error)
 	Create(ctx context.Context, request *gen.Create_Request) (*gen.Create_Response, error)
 	Delete(ctx context.Context, request *gen.Delete_Request) (*gen.Delete_Response, error)
 	Update(ctx context.Context, request *gen.Update_Request) (*gen.Update_Response, error)
@@ -29,8 +29,9 @@ func NewProductService(productRepo productRepo.ProductRepo, categoryRepo categor
 	}
 }
 
-func (s *productService) List(ctx context.Context) (*gen.List_Response, error) {
-	productModels, err := s.productRepo.List(ctx)
+func (s *productService) List(ctx context.Context, request *gen.List_Request) (*gen.List_Response, error) {
+	query, args, err := MakeQuery(request)
+	productModels, err := s.productRepo.List(ctx, query, args)
 	if err != nil {
 		return nil, err
 	}

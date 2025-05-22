@@ -46,7 +46,7 @@ func (g *GrpcService) GetById(ctx context.Context, request *gen.GetById_Request)
 	return g.productService.GetById(ctx, request)
 }
 func (g *GrpcService) List(ctx context.Context, request *gen.List_Request) (*gen.List_Response, error) {
-	return g.productService.List(ctx)
+	return g.productService.List(ctx, request)
 }
 func (g *GrpcService) Update(ctx context.Context, request *gen.Update_Request) (*gen.Update_Response, error) {
 	return g.productService.Update(ctx, request)

@@ -526,7 +526,19 @@ func (*CategoryGetById) Descriptor() ([]byte, []int) {
 }
 
 type List_Request struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
+	state protoimpl.MessageState `protogen:"open.v1"`
+	// pagination
+	Page     int32 `protobuf:"varint,1,opt,name=page,proto3" json:"page,omitempty"`
+	PageSize int32 `protobuf:"varint,2,opt,name=page_size,json=pageSize,proto3" json:"page_size,omitempty"`
+	// price
+	MinPrice float32 `protobuf:"fixed32,3,opt,name=min_price,json=minPrice,proto3" json:"min_price,omitempty"`
+	MaxPrice float32 `protobuf:"fixed32,4,opt,name=max_price,json=maxPrice,proto3" json:"max_price,omitempty"`
+	// sort
+	SortBy string `protobuf:"bytes,5,opt,name=sort_by,json=sortBy,proto3" json:"sort_by,omitempty"`
+	Asc    bool   `protobuf:"varint,6,opt,name=asc,proto3" json:"asc,omitempty"`
+	// filter
+	CategoryIds   []uint32 `protobuf:"varint,7,rep,packed,name=category_ids,json=categoryIds,proto3" json:"category_ids,omitempty"`
+	KeyWords      []string `protobuf:"bytes,8,rep,name=key_words,json=keyWords,proto3" json:"key_words,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -561,9 +573,66 @@ func (*List_Request) Descriptor() ([]byte, []int) {
 	return file_product_proto_rawDescGZIP(), []int{2, 0}
 }
 
+func (x *List_Request) GetPage() int32 {
+	if x != nil {
+		return x.Page
+	}
+	return 0
+}
+
+func (x *List_Request) GetPageSize() int32 {
+	if x != nil {
+		return x.PageSize
+	}
+	return 0
+}
+
+func (x *List_Request) GetMinPrice() float32 {
+	if x != nil {
+		return x.MinPrice
+	}
+	return 0
+}
+
+func (x *List_Request) GetMaxPrice() float32 {
+	if x != nil {
+		return x.MaxPrice
+	}
+	return 0
+}
+
+func (x *List_Request) GetSortBy() string {
+	if x != nil {
+		return x.SortBy
+	}
+	return ""
+}
+
+func (x *List_Request) GetAsc() bool {
+	if x != nil {
+		return x.Asc
+	}
+	return false
+}
+
+func (x *List_Request) GetCategoryIds() []uint32 {
+	if x != nil {
+		return x.CategoryIds
+	}
+	return nil
+}
+
+func (x *List_Request) GetKeyWords() []string {
+	if x != nil {
+		return x.KeyWords
+	}
+	return nil
+}
+
 type List_Response struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	Products      []*Product             `protobuf:"bytes,1,rep,name=products,proto3" json:"products,omitempty"`
+	TotalCount    int32                  `protobuf:"varint,2,opt,name=total_count,json=totalCount,proto3" json:"total_count,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -603,6 +672,13 @@ func (x *List_Response) GetProducts() []*Product {
 		return x.Products
 	}
 	return nil
+}
+
+func (x *List_Response) GetTotalCount() int32 {
+	if x != nil {
+		return x.TotalCount
+	}
+	return 0
 }
 
 type Create_Request struct {
@@ -1484,11 +1560,21 @@ const file_product_proto_rawDesc = "" +
 	"\vdescription\x18\x03 \x01(\tR\vdescription\x12\x10\n" +
 	"\x03qty\x18\x04 \x01(\x05R\x03qty\x12\x14\n" +
 	"\x05price\x18\x05 \x01(\x02R\x05price\x12-\n" +
-	"\bcategory\x18\x06 \x01(\v2\x11.product.CategoryR\bcategory\"K\n" +
-	"\x04List\x1a\t\n" +
-	"\aRequest\x1a8\n" +
+	"\bcategory\x18\x06 \x01(\v2\x11.product.CategoryR\bcategory\"\xc3\x02\n" +
+	"\x04List\x1a\xdf\x01\n" +
+	"\aRequest\x12\x12\n" +
+	"\x04page\x18\x01 \x01(\x05R\x04page\x12\x1b\n" +
+	"\tpage_size\x18\x02 \x01(\x05R\bpageSize\x12\x1b\n" +
+	"\tmin_price\x18\x03 \x01(\x02R\bminPrice\x12\x1b\n" +
+	"\tmax_price\x18\x04 \x01(\x02R\bmaxPrice\x12\x17\n" +
+	"\asort_by\x18\x05 \x01(\tR\x06sortBy\x12\x10\n" +
+	"\x03asc\x18\x06 \x01(\bR\x03asc\x12!\n" +
+	"\fcategory_ids\x18\a \x03(\rR\vcategoryIds\x12\x1b\n" +
+	"\tkey_words\x18\b \x03(\tR\bkeyWords\x1aY\n" +
 	"\bResponse\x12,\n" +
-	"\bproducts\x18\x01 \x03(\v2\x10.product.ProductR\bproducts\"\xae\x01\n" +
+	"\bproducts\x18\x01 \x03(\v2\x10.product.ProductR\bproducts\x12\x1f\n" +
+	"\vtotal_count\x18\x02 \x01(\x05R\n" +
+	"totalCount\"\xae\x01\n" +
 	"\x06Create\x1a\x87\x01\n" +
 	"\aRequest\x12\x12\n" +
 	"\x04name\x18\x01 \x01(\tR\x04name\x12 \n" +

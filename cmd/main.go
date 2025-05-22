@@ -9,6 +9,7 @@ import (
 	"github.com/vadim8q258475/store-product-microservice/iternal/cacher"
 	grpcService "github.com/vadim8q258475/store-product-microservice/iternal/grpc"
 	"github.com/vadim8q258475/store-product-microservice/iternal/interceptor"
+	"github.com/vadim8q258475/store-product-microservice/iternal/proxy"
 	repo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx"
 
 	categoryRepo "github.com/vadim8q258475/store-product-microservice/iternal/repo/sqlx/category"
@@ -57,7 +58,7 @@ func main() {
 
 	// repo proxy
 	categoryProxy := categoryRepo.NewCategoryProxy(cacher, categoryRepos)
-	productProxy := productRepo.NewProductProxy(cacher, productRepos)
+	productProxy := proxy.NewProductProxy(cacher, productRepos)
 
 	// service
 	productService := productService.NewProductService(productProxy, categoryProxy)

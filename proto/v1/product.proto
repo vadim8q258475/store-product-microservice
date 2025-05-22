@@ -34,9 +34,26 @@ message Product{
 }
 
 message List{
-    message Request{}
+    message Request{
+        // pagination
+        int32 page = 1; // start from 1
+        int32 page_size = 2;
+
+        // price
+        float min_price = 3;
+        float max_price = 4;
+
+        // sort
+        string sort_by = 5;
+        bool asc = 6;
+
+        // filter
+        repeated uint32 category_ids = 7;
+        repeated string key_words = 8;
+    }
     message Response{
         repeated Product products = 1;
+        int32 total_count = 2;
     }
 }
 
